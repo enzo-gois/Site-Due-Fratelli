@@ -1,0 +1,154 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+    /* text-transform: uppercase; */
+}
+
+header > nav{
+    display: flex;
+    background-color: #952A25;
+    justify-content: center;
+    height: 100px;
+    font-size: 17.5px;
+}
+
+ul > a > img{
+    margin-left: 35px;
+}
+
+.list_nav_header{
+    align-items: center;
+}
+
+.header_car{
+    padding-left: 37.5px ;
+}
+
+ul{
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+li{
+    list-style: none;
+    padding: 0px 25px;
+}
+
+.main_body{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 60.875px ;
+    background-color: whitesmoke;
+}
+
+.left_page{
+    display: flex;
+    background-color: #9C481C;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 40px;
+    width: 625px;
+    height: 450px;
+    text-transform: uppercase;
+}
+
+.left_page img{
+    border-radius: 30px;
+}
+
+.text_left_page{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-left: 70px;
+    height: 450px;
+    justify-content: space-evenly;
+}
+
+.text_left_page h3 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 35px;
+    color: white;
+    font-weight: 200;
+    text-align: center;
+}
+
+.text_left_page h4 {
+    font-family: 'Libre Baskerville', serif;
+    color: black;
+    background-color: white;
+    border-radius: 12px;
+    padding: 5px;
+}
+
+.right_page{
+    background-color: #952A25;
+    border-radius: 40px;
+    width: 312.5px;
+    height: 450px;
+}
+
+.right_page article{
+    text-align: center;
+}
+
+.right_page h5{
+    font-family: 'Alice', serif;
+    color: white;
+    padding: 25px;
+    font-size: 22.5px;
+}
+
+.right_page p {
+    font-size: 12.5px;
+    color: white ;
+}
+
+button{
+    background-color:#135F38 ;
+    color: white;
+    border: none;
+    padding: 12.5px 37.5px;
+    border-radius: 30px;
+    font-size: 22.5px;
+    width: max-content;
+    font-weight: 700;
+    cursor: pointer;
+    float: right;
+    text-transform: uppercase;
+}
+
+button:hover{
+    background-color:white;
+    color: black;
+}
+
+footer{
+    background-color: #952A25;
+}
+
+footer li{
+    padding: 25px;
+}
+
+footer ul{
+    justify-content: space-evenly;
+    font-size: 12.5px;
+}
+
+.contatos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contatos li{
+    display: flex;  
+}

@@ -1,0 +1,179 @@
+*{
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+}
+
+header > nav{
+  display: flex;
+  background-color: #952A25;
+  justify-content: center;
+  height: 100px;
+  font-size: 17.5px;
+}
+
+ul > a > img{
+  margin-left: 35px;
+}
+
+.main{
+  display: flex;
+  margin: 62.5px 187.5px;
+  flex-direction: column;
+  background-color: whitesmoke;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.368);
+}
+ 
+.cadastro-login, .buscaNaLoja{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: auto;
+  margin: 37.5px 0px;
+}
+
+.main h1{
+  background-color: #135F38;
+  color: white;
+  padding-left: 18.75px;
+  font-size: 22.5px;
+  font-weight: 300;
+}
+
+.first span{
+  margin: 6.25px;
+  font-size: 15px;
+  padding-left: 12.75px;
+}
+
+.first p{
+  margin: 36.25px 6.25px;
+  font-size: 15px;
+}
+
+.first{
+  display: flex;
+  justify-content: center;
+  padding-top: 37.5px;
+}
+
+.second, .third{
+  display: flex;
+  flex-direction: column;
+}
+
+.list_nav_header{
+  align-items: center;
+}
+
+.header_car{
+  padding-left: 37.5px ;
+}
+
+ul{
+  display: flex;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+li{
+  list-style: none;
+  padding: 0px 25px;
+}
+
+footer{
+  background-color: #952A25;
+  margin-top: 37.5px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#continuar, #continuar2, .button{
+  align-items: center;
+  background-color:#135F38 ;
+  color: white;
+  border: none;
+  padding: 12.5px 37.5px;
+  border-radius: 30px;
+  font-size: 17.5px;
+  width: max-content;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  margin-top: 25px;
+}
+
+
+footer li{
+  padding:25px;
+  list-style: none;
+}
+
+footer ul{
+  justify-content: space-evenly;
+  font-size: 12.5px;
+  display: flex;
+}
+
+footer a{
+  text-decoration: none;
+  color: white;
+}
+
+input{
+  font-size: 15px;
+  padding: 1px 0px 1px 6px;
+  width: 375px;
+  margin-left: 12.5px;
+  text-transform:none;
+}
+
+fieldset{
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  margin: 12.5px;
+  border: none;
+  border-radius: 12.5px;
+}
+
+fieldset div{
+  display: flex;
+  flex-direction:row;
+  justify-content: end;
+  align-items: center;
+  margin: 8.75px;
+}
+
+label{
+  color: #555;
+  font-size: 12.5px;
+}
+
+i{
+  color: red;
+}
+
+p{
+  font-size: 12.5px;
+  text-align: center;
+}
+
+input[type=text], [type=password], [type=email], [type=tel] {
+	appearance: none;
+	border: none;
+	outline: none;
+	border-bottom: .2em solid #147a45;
+	background: rgba(#E91E63, .2);
+	border-radius: .2em .2em 0 0;
+	padding: .4em;
+	color: #E91E63;
+  border-radius: 5px;
+}

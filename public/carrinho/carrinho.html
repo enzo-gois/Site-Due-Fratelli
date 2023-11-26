@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho</title>
+  <link rel="stylesheet" href="carrinho.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+  </style>
+  <script src="carrinho.js"></script>
+</head>
+<body>
+  <header>
+    <nav>               
+      <a href="../landing/index.html">
+        <img height="100px" width="100px" src="../images/logo.png" alt="">
+      </a>                
+      <ul class="list_nav_header">
+        <li><a href="../pedido/pedido.html">Pedir Minha Pizza</a></li>
+        <li><a href="../cardapio/cardapio.html">Cárdapio</a></li>
+        <li><a href="../cadastro/cadastro.html">Fazer Login <br> ou iniciar cadastro</a></li>
+        <a href="../carrinho/carrinho.html">
+          <img height="43.75px" width="50px" src="../images/carrinho.png" alt="Imagem de um carrinho de compras da cor branca">
+          <li>Carrinho</li>
+        </a>
+      </ul>
+    </nav>
+  </header>  
+  <main>
+    <section class="left_page">
+      <h1>Produtos</h1>
+      <div class="produtos">
+      <!-- <div class="product">
+          <img width="200px" height="200px" src="../images/pizza_calabresa.png" alt="">
+        <div class="info_produto">
+          <h2>Pizza de Calabresa</h2>
+          <p>Queijo, calabresa e cebola, oregano.</p>
+          <p>Preço: R$ 69.90</p>
+          <button>Remover</button>
+        </div>
+      </div> -->
+      <!-- <div class="product">
+        <img width="200px" height="200px" src="../images/pizza2.png" alt="">
+        <div class="info_produto">
+          <h2>Pizza Veggie</h2>
+          <p>Queijo, champignon, azeitona preta, <br> cebola, oregano e pimentão verde.</p>
+          <p>Preço: R$ 79.99</p>
+          <div class="buttons">
+            <button>Adicionar</button>
+            <button>Remover</button>
+          </div>
+        </div>
+      </div> -->
+        <!-- <div id="carrinhoVazio">
+          <img width="200px" height="200px" src="../images/carrinhoTriste.png" alt="">
+          <p>O carrinho está vazio!</p>
+        </div>
+      </div> -->
+    </section>
+    <div class="right_page">
+      <h1>Carrinho de Compras</h1>
+      <div class="cart">
+          <div class="cart-item">
+            <!-- <div class="infos">
+              <p>Pizza</p>
+              <p>Tamanho</p>
+              <p>Valor</p>
+            </div> -->
+          </div>
+          <hr>
+          <p id="total">Total: R$ 0,00</p>
+      </div>
+      <div>
+        <h1>Endereço</h1>
+        <div id="adress">
+          <p>Endereço informado </p>
+        </div>
+      </div>
+      <button class="checkout-button">Finalizar Compra</button>
+    </div>
+  </main>
+  <footer>
+    <nav>
+      <ul class="footer">
+        <li><a href="#">Sobre nós</a></li>    
+        <li><a href="#">Termos de Uso</a></li>    
+        <li><a href="#">Política de Privacidade</a></li>    
+        <li><a href="#">Fale conosco</a></li>    
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>

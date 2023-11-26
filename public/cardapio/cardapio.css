@@ -1,0 +1,204 @@
+*{
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header > nav{
+  display: flex;
+  background-color: #952A25;
+  justify-content: center;
+  height: 100px;
+  font-size: 17.5px;
+}
+
+ul > a > img{
+  margin-left: 35px;
+}
+
+.list_nav_header{
+  align-items: center;
+}
+
+.list_nav_header ul{
+  display: flex;
+}
+
+.list_nav_header a{
+  text-decoration: none;
+  color: white;
+}
+
+.list_nav_header li{
+  list-style: none;
+  padding: 0px 25px;
+}
+
+.header_car{
+  padding-left: 37.5px;
+}
+
+li{
+  list-style: none;
+  padding: 0px 25px;
+}
+
+.menu{
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+}
+
+.menu img{
+  border-radius: 12px;
+}
+
+.cardapio h1{
+  background-color: #8b3608;
+  margin-top: 25px;
+  padding: 12px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.menu h1{
+  padding-bottom: 0px 25px;
+  background-color: #135F38;
+  display: block;
+  color: white;
+  width: 875px;
+  text-transform: uppercase;
+}
+
+#mais_pedidas  h4, #classicas h4{
+  font-size: 25px;
+  color: black;
+  border-radius: 6.25px;
+  font-weight: 400;
+  /* text-transform: uppercase; */
+}
+
+#mais_pedidas, #classicas{
+  display: flex;
+  gap: 25px;
+}
+
+#headers{
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
+}
+
+#headers button{
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  display:block;
+  padding: 6.25px;
+  margin-top: 12px; 
+  text-align: center;
+  border: none;
+}
+
+h2{
+  background-color:#952A25 ;
+  color: white;
+  font-size: 16.25px;
+  margin: 18.75px 12px;
+  padding: 6.26px 12px;
+  display: block;
+  font-weight: 200;
+  text-align: center;
+  width: 875px;
+}
+
+h3{
+  font-size: 15px;
+  color: #952A25;
+  font-weight: 700;
+  text-transform: none;
+}
+
+h1{
+  text-align: center;
+  font-size: 22.5px;
+  font-weight: 200;
+  font-family: 'Libre Baskerville', serif;
+}
+
+p{
+  text-transform: none;
+  font-size: 13px;
+  max-width: 281.25px;
+}
+
+ul{
+  display: flex;
+  padding: 25px 0px;
+}
+
+ul div{
+  padding: 0px 12px;
+}
+
+footer{
+  background-color: #952A25;
+}
+
+footer li{
+  padding: 0px 25px;
+  list-style: none;
+}
+
+footer ul{
+  justify-content: space-evenly;
+  font-size: 12px;
+  display: flex;
+}
+
+footer a{
+  text-decoration: none;
+  color: white;
+}
+
+button{
+  background-color: #135F38 ;
+  border-radius: 6.25px;
+  width: 100%;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color:#952A25;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 25px;
+  border: 1.25px solid #888;
+  width: 40%;
+  text-align: center;
+}
+
+.sizes {
+  margin-top: 25px;
+}
