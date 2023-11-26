@@ -1,29 +1,5 @@
 window.addEventListener("load", main);
 
-const mais_pedidas = [
-  {
-    id: 0,
-    img: "../images/pizza_calabresa.png",
-    nome: "Pizza de Calabresa",
-    descricao: "Queijo, calabresa e cebola, oregano.",
-    preco: "69,90"
-  },
-  {
-    id: 1,
-    img: "../images/pizza_gorgonzola.png",
-    nome: "Pizza Gorgonzola",
-    descricao: "Mussarela, gorgonzola, tomate e salsa",
-    preco: "75,90"
-  },
-  {
-    id: 2,
-    img: "../images/pizza_queijo.png",
-    nome: "Pizza de Queijo",
-    descricao: "Queijo e Manjericão",
-    preco: "60,00"
-  },
-]
-
 const classicas = [
   {
     id:3,
@@ -55,8 +31,12 @@ const classicas = [
   }
 ]
 
-function main(){
+async function main(){
   const div = document.getElementById("mais_pedidas")
+
+  const response = await fetch('http://localhost:3000/pizza/mais_pedidas')
+  const data = await response.json()
+  mais_pedidas = data
 
   for(let x = 0; x < mais_pedidas.length; x++){
     const section = document.createElement("section");

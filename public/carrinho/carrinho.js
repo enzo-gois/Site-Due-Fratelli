@@ -93,7 +93,6 @@ document.addEventListener('DOMContentLoaded', function() {
       enderecoInformado.innerHTML = enderecoHTML;
     }
   }
-
 });
 
 function calculaTotal(){
