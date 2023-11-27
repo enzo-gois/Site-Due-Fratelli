@@ -87,6 +87,20 @@ li{
     padding: 5px;
 }
 
+.left_page a{
+    background-color:#135F38 ;
+    color: white;
+    border: none;
+    padding: 12.5px 37.5px;
+    border-radius: 30px;
+    font-size: 22.5px;
+    width: max-content;
+    font-weight: 700;
+    cursor: pointer;
+    float: right;
+    text-transform: uppercase;
+}
+
 .right_page{
     background-color: #952A25;
     border-radius: 40px;
@@ -110,21 +124,7 @@ li{
     color: white ;
 }
 
-button{
-    background-color:#135F38 ;
-    color: white;
-    border: none;
-    padding: 12.5px 37.5px;
-    border-radius: 30px;
-    font-size: 22.5px;
-    width: max-content;
-    font-weight: 700;
-    cursor: pointer;
-    float: right;
-    text-transform: uppercase;
-}
-
-button:hover{
+.left_page a:hover{
     background-color:white;
     color: black;
 }
