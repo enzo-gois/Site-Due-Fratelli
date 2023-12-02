@@ -3,31 +3,46 @@ const path = require('path');
 const app = express();
 const bodyParser = require('body-parser')
 
-// Define o diretório dos arquivos estáticos
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Rota para a página inicial
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'landing', 'index.html'));
 });
 
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.post('/enviar-dados', (req, res) => {
-  const usuarios = req.body; // Dados do formulário enviados pelo cliente // Exibe os dados no console do servidor
-  console.log(usuarios)
+let usuariosCadastrados = [];
 
-  res.status(200).json({ message: 'Dados recebidos com sucesso!' });
+app.post('/enviar-dados', (req, res) => {
+  const usuarios = req.body;
+  console.log(usuarios)
+  usuariosCadastrados.push(usuarios)
+  res.status(200).json(req.body);
 });
 
-// Importa e usa as rotas de pizza
+app.post('/verificar-login', (req, res) => {
+  const { email, senha } = req.body;
+  const usuarioEncontrado = usuariosCadastrados.find(
+    (usuario) => usuario.email === email && usuario.senha === senha
+  );
+
+  if (usuarioEncontrado) {
+    res.status(200).json({ message: 'Login bem-sucedido!' });
+    console.log(usuarioEncontrado.nome,usuarioEncontrado.email);
+  } else {
+    res.status(401).json({ message: 'Usuário não encontrado' });
+  }
+});
+
+
 const pizzaRoutes = require('./src/routes/pizzaRouter');
 app.use('/pizza', pizzaRoutes);
 
 const classicRoutes = require('./src/routes/classicRoutes');
 app.use('/pizza', classicRoutes);
 
-const port = 3000; // Porta do servidor
+const port = 3000;
 
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}/`);

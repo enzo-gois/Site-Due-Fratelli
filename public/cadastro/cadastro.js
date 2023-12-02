@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (exibirCadastro && cadastroLogin) {
     exibirCadastro.addEventListener('click', function(event) {
-      event.preventDefault(); // Evita o comportamento padrão do link (neste caso, redirecionamento)
+      event.preventDefault(); 
 
       cadastroLogin.style.display = 'block';
       foter.style.position = 'relative'
@@ -19,16 +19,14 @@ document.addEventListener('DOMContentLoaded', function() {
   const formularioCadastro = document.getElementById('formularioCadastro');
 
   formularioCadastro.addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita o envio padrão do formulário
+    event.preventDefault();
 
-    // Obter os dados do formulário
     const formData = new FormData(formularioCadastro);
     const data = {};
     formData.forEach((value, key) => {
       data[key] = value;
     });
 
-    // Enviar os dados para o backend
     fetch('/enviar-dados', {
       method: 'POST',
       headers: {
@@ -38,13 +36,37 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     
     .then(response => {
-      // Lidar com a resposta do servidor
       alert('Dados enviados com sucesso!');
-      // Você pode redirecionar o usuário ou fazer qualquer outra coisa após o envio bem-sucedido
     })
     .catch(error => {
       console.error('Erro ao enviar os dados:', error);
     });
   });
+
+  const formularioLogin = document.getElementById('formularioLogin');
+
+  formularioLogin.addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  const email = document.getElementById('emailLogin').value;
+  const senha = document.getElementById('senhaLogin').value;
+
+  const data = { email, senha };
+
+  fetch('/verificar-login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      alert(data.message);
+    })
+    .catch((error) => {
+      console.error('Erro ao fazer login:', error);
+    });
+});
 
 });

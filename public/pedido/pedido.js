@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (deliveryLink && cadastroLoginSection) {
     deliveryLink.addEventListener('click', function(event) {
-      event.preventDefault(); // Evita o comportamento padrão do link (neste caso, redirecionamento)
+      event.preventDefault();
 
       cadastroLoginSection.style.display = 'flex';
       foter.style.position = 'relative';
