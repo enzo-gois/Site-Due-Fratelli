@@ -32,18 +32,18 @@
       </ul>
     </nav>
   </header>  
-  <form action="">
-    <div class="criar_perfil">
+  <div class="criar_perfil">
+    <form id="formularioLogin" action="">
       <section class="pagina_cadastro">
         <h1>Faça o login</h1>
         <fieldset>
           <div>
             <label for="email"> E-mail: </label>
-            <input type="text" id="nome" name="email" placeholder="Digite o seu e-mail">
+            <input type="text" id="emailLogin" name="email" placeholder="Digite o seu e-mail">
           </div>
           <div>
             <label for="senha">Senha: </label>
-            <input type="password" id="senha" name="senha" placeholder="Digite a sua senha">
+            <input type="password" id="senhaLogin" name="senha" placeholder="Digite a sua senha">
           </div>
         </fieldset>
         <p class="criar-conta">Não possui uma conta? <a id="exibirCadastro" href="">  Crie uma agora</a></p>
@@ -51,6 +51,8 @@
           Fazer Login
         </button>
       </section>
+    </form>
+    <form id="formularioCadastro" action='/enviar-dados' method="post">
       <section class="login-cadastro">
         <h1>Faça o seu cadastro</h1>
         <fieldset>
@@ -91,13 +93,13 @@
           <p>
             <i>*</i> Campus Obrigatórios
           </p>
-          <button id="butaoConfirma">
+          <button type="submit" id="butaoConfirma">
             Criar conta
           </button>
         </div>
       </section>
-    </div>
-  </form>
+    </form>
+  </div>
   <footer class="foter">
     <nav>
       <ul class="footer">

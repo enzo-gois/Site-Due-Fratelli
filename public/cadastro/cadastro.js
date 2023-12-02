@@ -16,30 +16,35 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  cadastraUsuario();
-});
+  const formularioCadastro = document.getElementById('formularioCadastro');
 
-function cadastraUsuario(){
-  const btnCriarConta = document.getElementById('butaoConfirma');
+  formularioCadastro.addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita o envio padrão do formulário
 
-  // Adicionando um evento de clique ao botão
-  btnCriarConta.addEventListener('click', function() {
-    // Obtendo os valores dos campos de entrada
-    const senha = document.getElementById('senha').value;
-    const email = document.getElementById('email').value;
-    const cemail = document.getElementById('cemail').value;
-  
-    // Criando um objeto com os valores obtidos
-    const dadosUsuario = {
-      senha,
-      email,
-      cemail,
-    };
-  
-    // Convertendo os dados para formato JSON e armazenando no localStorage
-    localStorage.setItem('dadosUsuario', JSON.stringify(dadosUsuario));
-  
-    // Exemplo de exibição dos dados no console (pode ser removido em produção)
-    alert('Dados do usuário armazenados!');
+    // Obter os dados do formulário
+    const formData = new FormData(formularioCadastro);
+    const data = {};
+    formData.forEach((value, key) => {
+      data[key] = value;
+    });
+
+    // Enviar os dados para o backend
+    fetch('/enviar-dados', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    
+    .then(response => {
+      // Lidar com a resposta do servidor
+      alert('Dados enviados com sucesso!');
+      // Você pode redirecionar o usuário ou fazer qualquer outra coisa após o envio bem-sucedido
+    })
+    .catch(error => {
+      console.error('Erro ao enviar os dados:', error);
+    });
   });
-}
+
+});
