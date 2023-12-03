@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'landing', 'index.html'));
 });
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 let usuariosCadastrados = [];
@@ -18,7 +18,7 @@ app.post('/enviar-dados', (req, res) => {
   const usuarios = req.body;
   console.log(usuarios)
   usuariosCadastrados.push(usuarios)
-  res.status(200).json(req.body);
+  res.status(200).json({message: 'Dados recebidos com sucesso'});
 });
 
 app.post('/verificar-login', (req, res) => {
@@ -34,7 +34,6 @@ app.post('/verificar-login', (req, res) => {
     res.status(401).json({ message: 'Usuário não encontrado' });
   }
 });
-
 
 const pizzaRoutes = require('./src/routes/pizzaRouter');
 app.use('/pizza', pizzaRoutes);

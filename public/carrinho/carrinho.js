@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
         Rua: ${formData.rua}<br>
         Número: ${formData.numero}<br>
         Complemento: ${formData.complemento}<br>
-        Informação adicional: ${formData.info}
+        Ponto de referência: ${formData.info}
       `;
   
       enderecoInformado.innerHTML = enderecoHTML;
